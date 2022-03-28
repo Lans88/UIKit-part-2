@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-DP-Wvz">
+                                <rect key="frame" x="62" y="192" width="772" height="31"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <imageReference key="minimumValueImage" image="01.square.fill" catalog="system" symbolScale="large"/>
+                                <imageReference key="maximumValueImage" image="50.square.fill" catalog="system" symbolScale="large"/>
+                                <color key="maximumTrackTintColor" systemColor="systemIndigoColor"/>
+                                <color key="thumbTintColor" systemColor="systemPinkColor"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-8Z-Efd">
+                                <rect key="frame" x="390.5" y="252" width="115.5" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Проверить">
+                                    <fontDescription key="titleFontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checknumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mn-Me-2Mc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZL-bf-Hf8">
+                                <rect key="frame" x="443" y="319" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.80514282267388848" green="0.84088918105843136" blue="0.38236762015490366" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lgO-8Z-Efd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Nk-Pe-TVc"/>
+                            <constraint firstItem="4Fi-DP-Wvz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1aN-YB-DEm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Fi-DP-Wvz" secondAttribute="trailing" constant="20" id="72X-pD-Gl3"/>
+                            <constraint firstItem="HZL-bf-Hf8" firstAttribute="top" secondItem="lgO-8Z-Efd" secondAttribute="bottom" constant="30" id="N1N-XG-gia"/>
+                            <constraint firstItem="lgO-8Z-Efd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2L-81-rjk"/>
+                            <constraint firstItem="lgO-8Z-Efd" firstAttribute="top" secondItem="4Fi-DP-Wvz" secondAttribute="bottom" constant="30" id="RMP-fr-1eC"/>
+                            <constraint firstItem="HZL-bf-Hf8" firstAttribute="centerX" secondItem="lgO-8Z-Efd" secondAttribute="centerX" id="ViO-V1-8eh"/>
+                            <constraint firstItem="4Fi-DP-Wvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i74-xw-a5g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="HZL-bf-Hf8" id="okk-20-Ucu"/>
+                        <outlet property="slider" destination="4Fi-DP-Wvz" id="SLW-O5-rcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19.419642857142858" y="65.217391304347828"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="01.square.fill" catalog="system" width="128" height="114"/>
+        <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
